@@ -66,6 +66,9 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
 
     <!-- Load our stylesheet for IE8 -->
     <!--[if IE 8]>
@@ -73,8 +76,8 @@
     <![endif]-->
 
     <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 
     <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
     <!--[if IE]>
@@ -85,8 +88,8 @@
     <![endif]-->
 
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/jquery.min.js"><\/script>')</script>
 
     <!-- Load these in the <head> for quicker IE8+ load times -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -98,6 +101,10 @@
 </head>
 
 <body id="index-video" class="lightnav animsition">
+
+    <!--[if lt IE 10]>
+      <div style="background-color:white; text-align:center; padding-top:100px;"><h2 class="browsehappy">You are using an <strong>outdated</strong> browser. Just like Brittney, this page is cutting edge! Please <a href="http://browsehappy.com/" style="color:blue">upgrade your browser</a> to improve your experience and security.</h1></div>
+    <![endif]-->
 
     <!-- ============================ Off-canvas navigation =========================== -->
 
@@ -396,7 +403,7 @@
                 </div>
                 <br>
                 <div class="row">
-                    <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/def0b96a1a74ffec1ca80b2fbeb9866dfc18c84c.html" id="instansive_def0b96a1a" name="instansive_def0b96a1a"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                    <!-- INSTANSIVE WIDGET --><script src="http://instansive.com/widget/js/instansive.js"></script><iframe src="http://instansive.com/widgets/def0b96a1a74ffec1ca80b2fbeb9866dfc18c84c.html" id="instansive_def0b96a1a" name="instansive_def0b96a1a"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
                 </div>
             </div>
         </section>
@@ -646,7 +653,17 @@
             </div>
         </footer>
 
-
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/animsition/dist/js/jquery.animsition.js"></script>
+    <script src="bower_components/animsition/dist/js/jquery.animsition.min.js"></script>
+    <script src="bower_components/pace/pace.js"></script>
+    <script src="bower_components/bootstrap-autohidingnavbar/src/jquery.bootstrap-autohidingnavbar.js"></script>
+    <script src="bower_components/WOW/dist/wow.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
         <!-- build:js(.) scripts/plugins.js -->
         <script src="bower_components/bootstrap/js/affix.js"></script>
         <script src="bower_components/bootstrap/js/alert.js"></script>
@@ -689,10 +706,10 @@
                 resizeHero();
             });
         </script>
-        <script src="js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load first -->
-        <script src="js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
-        <script src="js/jquery.fs.wallpaper.js"></script><!-- Background video plugin for hero section -->
-        <script src="js/scripts.js"></script><!-- Theme scripts -->
+
+        <script src="scripts/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+        <script src="scripts/jquery.fs.wallpaper.js"></script><!-- Background video plugin for hero section -->
+
         <!-- Initiate flexslider plugin -->
         <script type="text/javascript">
             $(document).ready(function($) {
@@ -716,13 +733,6 @@
                 });
             });
         </script>
-        <script src="includes/mailchimp/jquery.ajaxchimp.min.js"></script><!-- Mailchimp ajax form submit -->
-        <script type="text/javascript">
-            $('#mc-form').ajaxChimp({
-                url: 'add-mailchimp-list-url-here'
-            });
-        </script>
-
     </div>
     <!-- ============================ END #sb-site Main Page Wrapper =========================== -->
 

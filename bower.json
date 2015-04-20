@@ -7,6 +7,10 @@
     "animsition": "~3.4.3",
     "animate.css": "~3.2.6",
     "Slidebars": "~0.10.2",
-    "FlexSlider": "*"
+    "FlexSlider": "*",
+    "pace": "~1.0.2",
+    "bootstrap-autohidingnavbar": "~1.0.0",
+    "WOW": "~1.1.2",
+    "jquery": "~2.1.3"
   }
 }
