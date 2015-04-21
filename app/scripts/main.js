@@ -249,7 +249,7 @@ $(document).ready(function($) {
 		            var st = $(this).scrollTop();
 		            divs.css({
 		                'margin-top': -(st / 0) + "px",
-		                'opacity': 0.8 - st / 1600
+		                'opacity': 0.6 - st / 1600
 		            });
 		        });
 		    });
